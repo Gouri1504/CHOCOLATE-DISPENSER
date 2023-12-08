@@ -236,7 +236,7 @@ var chocolates = [
 function addChocolates(chocolates,color, count)
 {
   if(count<=0)
-  return "Number can not be zero/";
+  return "Number can not be zero/negative";
   for(let i=0;i<chocolates.length;i++)
   {
     chocolates.unshift(color);
@@ -322,8 +322,8 @@ function sortChocolateBasedOnCount(chocolates){
 const allColors=[];
 for(const color in obj ){
   const count =obj[color];
-  for(leti=0;i<count;i++){
-    cllColors.push(color);
+  for(let i=0;i<count;i++){
+    allColors.push(color);
   }
 
 }
@@ -335,7 +335,7 @@ allColors.sort((a,b)=> {
   return obj[b]-obj[a];
 });
 return allColors
-
+}
 
 //Progression 7: Change z chocolates of x color to y color
 const helperToChangeChocolateColor=function(chocolates,color1,color2){
@@ -376,7 +376,7 @@ function changeChocolateColorAllOfxCount(chocolates,color1,color2){
   }
 })
 return[counter,changedColor]
-
+}
 //Challenge 1: Remove one chocolate of x color from the top
 
 
